@@ -172,7 +172,7 @@ echo "${RED} #################### ${RESET}"
 # echo ""
 
 echo "${BLUE} installing dirsearch${RESET}"
-git clone https://github.com/maurosoria/dirsearch.git ~/tools/dirsearch
+git clone https://github.com/maurosoria/dirsearch.git
 echo "${BLUE} done${RESET}"
 echo ""
 
