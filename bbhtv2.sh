@@ -67,27 +67,27 @@ echo ""
 echo ""
 sar 1 1 >/dev/null 
 
-echo "${GREEN} [+] Installing Golang ${RESET}"
-if [ ! -f /usr/bin/go ];then
-    cd ~
-    wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
-	export GOROOT=$HOME/.go
-	export PATH=$GOROOT/bin:$PATH
-	export GOPATH=$HOME/go
-    echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
+# echo "${GREEN} [+] Installing Golang ${RESET}"
+# if [ ! -f /usr/bin/go ];then
+#     cd ~
+#     wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+# 	export GOROOT=$HOME/.go
+# 	export PATH=$GOROOT/bin:$PATH
+# 	export GOPATH=$HOME/go
+#     echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
 	
-	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
-    source ~/.bash_profile 
-else 
-    echo "${BLUE} Golang is already installed${RESET}"
-fi
-    break
-echo""
-echo "${BLUE} Done Install Golang ${RESET}"
-echo ""
-echo ""
-sar 1 1 >/dev/null
+# 	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+# 	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
+#     source ~/.bash_profile 
+# else 
+#     echo "${BLUE} Golang is already installed${RESET}"
+# fi
+#     break
+# echo""
+# echo "${BLUE} Done Install Golang ${RESET}"
+# echo ""
+# echo ""
+# sar 1 1 >/dev/null
 
 #Installing tools
 
@@ -96,13 +96,13 @@ echo "${RED} # Installing tools # ${RESET}"
 echo "${RED} #################### ${RESET}"
 
 
-#install Masscan
-sudo apt-get -y install git gcc make libpcap-dev
-git clone https://github.com/robertdavidgraham/masscan
-cd masscan/
-make
-sudo make install
-echo ""
+# #install Masscan
+# sudo apt-get -y install git gcc make libpcap-dev
+# git clone https://github.com/robertdavidgraham/masscan
+# cd masscan/
+# make
+# sudo make install
+# echo ""
 
 
 # echo "${GREEN} #### Basic Tools #### ${RESET}"
@@ -171,10 +171,10 @@ echo ""
 # echo "${BLUE} done${RESET}"
 # echo ""
 
-# echo "${BLUE} installing dirsearch${RESET}"
-# git clone https://github.com/maurosoria/dirsearch.git ~/tools/dirsearch
-# echo "${BLUE} done${RESET}"
-# echo ""
+echo "${BLUE} installing dirsearch${RESET}"
+git clone https://github.com/maurosoria/dirsearch.git ~/tools/dirsearch
+echo "${BLUE} done${RESET}"
+echo ""
 
 # echo "${BLUE} installing wfuzz${RESET}"
 # sudo apt-fast install wfuzz
