@@ -67,27 +67,27 @@ echo ""
 echo ""
 sar 1 1 >/dev/null 
 
-echo "${GREEN} [+] Installing Golang ${RESET}"
-if [ ! -f /usr/bin/go ];then
-    cd ~
-    wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
-	export GOROOT=$HOME/.go
-	export PATH=$GOROOT/bin:$PATH
-	export GOPATH=$HOME/go
-    echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
+# echo "${GREEN} [+] Installing Golang ${RESET}"
+# if [ ! -f /usr/bin/go ];then
+#     cd ~
+#     wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+# 	export GOROOT=$HOME/.go
+# 	export PATH=$GOROOT/bin:$PATH
+# 	export GOPATH=$HOME/go
+#     echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
 	
-	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
-    source ~/.bash_profile 
-else 
-    echo "${BLUE} Golang is already installed${RESET}"
-fi
-    break
-echo""
-echo "${BLUE} Done Install Golang ${RESET}"
-echo ""
-echo ""
-sar 1 1 >/dev/null
+# 	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+# 	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
+#     source ~/.bash_profile 
+# else 
+#     echo "${BLUE} Golang is already installed${RESET}"
+# fi
+#     break
+# echo""
+# echo "${BLUE} Done Install Golang ${RESET}"
+# echo ""
+# echo ""
+# sar 1 1 >/dev/null
 
 #Installing tools
 
@@ -768,12 +768,12 @@ echo ""
 # echo "${BLUE} done${RESET}"
 # echo ""
 
-# echo "${BLUE} installing amass${RESET}"
-# cd ~ && echo -e "Downloading amass version ${AMASS_VERSION} ..." && wget -q https://github.com/OWASP/Amass/releases/download/v${AMASS_VERSION}/amass_linux_amd64.zip && unzip amass_linux_amd64.zip && mv amass_linux_amd64/amass /usr/bin/
-# cd ~ && rm -rf amass_linux_amd64* amass_linux_amd64.zip*
-# echo "${BLUE} done${RESET}"
-# echo ""
-# unzip -q temp.zip && 
+echo "${BLUE} installing amass${RESET}"
+cd ~ && echo -e "Downloading amass version ${AMASS_VERSION} ..." && wget -q https://github.com/OWASP/Amass/releases/download/v${AMASS_VERSION}/amass_linux_amd64.zip && unzip amass_linux_amd64.zip && mv amass_linux_amd64/amass /usr/bin/
+cd ~ && rm -rf amass_linux_amd64* amass_linux_amd64.zip*
+echo "${BLUE} done${RESET}"
+echo ""
+unzip -q temp.zip && 
 
 
 # echo "${BLUE} installing impacket${RESET}"
