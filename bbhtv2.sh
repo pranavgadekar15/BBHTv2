@@ -173,10 +173,10 @@ echo ""
 # echo "${BLUE} done${RESET}"
 # echo ""
 
-echo "${BLUE} installing dirsearch${RESET}"
-git clone https://github.com/maurosoria/dirsearch.git
-echo "${BLUE} done${RESET}"
-echo ""
+# echo "${BLUE} installing dirsearch${RESET}"
+# git clone https://github.com/maurosoria/dirsearch.git
+# echo "${BLUE} done${RESET}"
+# echo ""
 
 # echo "${BLUE} installing wfuzz${RESET}"
 # sudo apt-fast install wfuzz
