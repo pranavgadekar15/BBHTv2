@@ -106,6 +106,12 @@ sudo apt install screen
 # sudo make install
 # echo ""
 
+#install massdns
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+echo ""
+
 
 # echo "${GREEN} #### Basic Tools #### ${RESET}"
 
