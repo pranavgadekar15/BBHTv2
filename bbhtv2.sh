@@ -67,27 +67,27 @@ echo ""
 echo ""
 sar 1 1 >/dev/null 
 
-# echo "${GREEN} [+] Installing Golang ${RESET}"
-# if [ ! -f /usr/bin/go ];then
-#     cd ~
-#     wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
-# 	export GOROOT=$HOME/.go
-# 	export PATH=$GOROOT/bin:$PATH
-# 	export GOPATH=$HOME/go
-#     echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
+echo "${GREEN} [+] Installing Golang ${RESET}"
+if [ ! -f /usr/bin/go ];then
+    cd ~
+    wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+	export GOROOT=$HOME/.go
+	export PATH=$GOROOT/bin:$PATH
+	export GOPATH=$HOME/go
+    echo 'export GOROOT=$HOME/.go' >> ~/.bash_profile
 	
-# 	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-# 	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
-#     source ~/.bash_profile 
-# else 
-#     echo "${BLUE} Golang is already installed${RESET}"
-# fi
-#     break
-# echo""
-# echo "${BLUE} Done Install Golang ${RESET}"
-# echo ""
-# echo ""
-# sar 1 1 >/dev/null
+	echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+	echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile
+    source ~/.bash_profile 
+else 
+    echo "${BLUE} Golang is already installed${RESET}"
+fi
+    break
+echo""
+echo "${BLUE} Done Install Golang ${RESET}"
+echo ""
+echo ""
+sar 1 1 >/dev/null
 
 #Installing tools
 
@@ -168,12 +168,12 @@ echo ""
 # sar 1 1 >/dev/null
 # echo ""
 
-# echo "${GREEN}#### Installing fuzzing tools ####${RESET}"
-# #install gobuster
-# echo "${BLUE} installing gobuster${RESET}"
-# sudo go get -u github.com/OJ/gobuster
-# echo "${BLUE} done${RESET}"
-# echo ""
+echo "${GREEN}#### Installing fuzzing tools ####${RESET}"
+#install gobuster
+echo "${BLUE} installing gobuster${RESET}"
+go get -u github.com/OJ/gobuster
+echo "${BLUE} done${RESET}"
+echo ""
 
 # #install ffuf
 # echo "${BLUE} installing ffuf${RESET}"
